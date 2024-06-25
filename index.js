@@ -2,25 +2,25 @@ const { DirectSecp256k1HdWallet } = require('@cosmjs/proto-signing');
 const { stringToPath } = require('@cosmjs/crypto');
 
 
-const mnemonic = '';
+const Mnemonic = '';
 
-async function generateAddresses(mnemonic) {
+const generateAddresses = async (mnemonic) => {
     const path = stringToPath("m/44'/990'/0'/0/0");
 
-    //Coreum chain
-    const coreumWallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix: 'core', hdPaths: [path]});
-    const [coreumAccount] = await coreumWallet.getAccounts();
-    console.log('Coreum address:', coreumAccount.address);
+    //coreum chain
+    const CoreumoreumWallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix: 'core', hdPaths: [path]});
+    const [CoreumAccount] = await CoreumoreumWallet.getAccounts();
+    console.log('Coreum address:', CoreumAccount.address);
 
-    // Cosmos chain
-    const cosmosWallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix: 'cosmos', hdPaths: [path]});
-    const [cosmosAccount] = await cosmosWallet.getAccounts();
-    console.log('Cosmos Hub address:', cosmosAccount.address);
+    //cosmos chain
+    const CosmosWallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix: 'cosmos', hdPaths: [path]});
+    const [CosmosAccount] = await CosmosWallet.getAccounts();
+    console.log('Cosmos Hub address:', CosmosAccount.address);
 
-    // Osmosis chain
-    const osmosisWallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix: 'osmo', hdPaths: [path]});
-    const [osmosisAccount] = await osmosisWallet.getAccounts();
-    console.log('Osmosis address:', osmosisAccount.address);
+    //osmosis chain
+    const OsmosisWallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix: 'osmo', hdPaths: [path]});
+    const [OsmosisAccount] = await OsmosisWallet.getAccounts();
+    console.log('Osmosis address:', OsmosisAccount.address);
 }
 
-generateAddresses(mnemonic);
+generateAddresses(Mnemonic);
