@@ -2,7 +2,7 @@ const { DirectSecp256k1HdWallet } = require('@cosmjs/proto-signing');
 const { stringToPath } = require('@cosmjs/crypto');
 
 
-const mnemonic = 'rough olympic update gloom play squirrel license pride cup hazard onion effort';
+const mnemonic = '';
 
 async function generateAddresses(mnemonic) {
     const path = stringToPath("m/44'/990'/0'/0/0");
