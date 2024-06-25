@@ -8,8 +8,8 @@ const generateAddresses = async (mnemonic) => {
     const path = stringToPath("m/44'/990'/0'/0/0");
 
     //coreum chain
-    const CoreumoreumWallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix: 'core', hdPaths: [path]});
-    const [CoreumAccount] = await CoreumoreumWallet.getAccounts();
+    const CoreumWallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, { prefix: 'core', hdPaths: [path]});
+    const [CoreumAccount] = await CoreumWallet.getAccounts();
     console.log('Coreum address:', CoreumAccount.address);
 
     //cosmos chain
